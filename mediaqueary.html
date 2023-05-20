@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query in Html</title>
+
+    <style>
+
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+       .container {
+        height: 100vh;
+        width: 100%;
+        text-align: center;
+        border-radius: 10px;
+        background-color: #7fffd5;
+        }
+        .laptop_large,
+        .laptop,
+        .tablet,
+        .mobile {
+                  font-size: 40px;
+                   text-align: center;
+                     display: none;
+          }
+       
+        @media screen and (max-width:1440px) {
+
+            .container{
+                background-color:#208b21;
+                
+            }
+           .laptop_large{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           }
+            
+        }
+        @media screen and (max-width:1024px) {
+
+            .container{
+                 background-color:#b0882f;
+    
+        }
+        .laptop{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           }
+           .laptop_large{
+            display: none;
+           }
+    }
+        @media screen and (max-width:768px) {
+
+            .container{
+                background-color:#75fbfd;
+
+            }
+            .tablet{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           }
+           .laptop{
+            display: none;
+           }
+           .laptop_large{
+            display: none;
+           }
+    }
+    @media screen and (max-width:425px) {
+
+             .container{
+                 background-color:#ca3142;
+
+             }
+         .mobile{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           }
+           .tablet{
+            display: none;
+           }
+           .laptop{
+            display: none;
+           }
+           .laptop_large{
+            display: none;
+           }
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>This is the media query demo page.</h3>
+        <p class="laptop_large">Screen size : 1440px</p>
+        <p class="laptop">Screen size : 1024px</p>
+        <p class="tablet">Screen size : 768px</p>
+        <p class="mobile">Screen size : 425px</p>
+    </div>
+</body>
+</html>
